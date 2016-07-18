@@ -38,6 +38,7 @@ sudo dnf -y install \
 	moreutils \
 	openssh-server \
 	p7zip \
+	qt5-\* \
 	qt-creator \
 	socat \
 	swig \
