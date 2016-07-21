@@ -3,7 +3,7 @@
 # check user privilege
 sudo -v
 
-# add repositories
+# add google repository
 sudo cat <<EOF | sudo tee "/etc/yum.repos.d/google-chrome.repo" > /dev/null
 [google-chrome]
 name=google-chrome
@@ -13,11 +13,15 @@ gpgcheck=1
 gpgkey=https://dl.google.com/linux/linux_signing_key.pub
 EOF
 
+# add rpm fusion repositories
+sudo -E dnf -y install http://download1.rpmfusion.org/free/fedora/rpmfusion-free-release-$(rpm -E %fedora).noarch.rpm
+sudo -E dnf -y install http://download1.rpmfusion.org/nonfree/fedora/rpmfusion-nonfree-release-$(rpm -E %fedora).noarch.rpm
+
 # upgrade system
-sudo dnf -y upgrade
+sudo -E dnf -y upgrade
 
 # install packages
-sudo dnf -y install \
+sudo -E dnf -y install \
 	automake \
 	banshee \
 	boost \
@@ -44,10 +48,9 @@ sudo dnf -y install \
 	swig \
 	valgrind \
 	vim-enhanced \
+	VirtualBox \
+	vlc \
 	xmlstarlet
-
-#	VirtualBox \
-#	vlc \
 
 # install codecs
 #sudo dnf install gstreamer1-plugins-base gstreamer1-plugins-good gstreamer1-plugins-ugly gstreamer1-plugins-bad-free gstreamer1-plugins-bad-free gstreamer1-plugins-bad-freeworld gstreamer1-plugins-bad-free-extras ffmpeg
