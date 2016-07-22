@@ -22,6 +22,7 @@ sudo -E dnf -y upgrade
 
 # install packages
 sudo -E dnf -y install \
+	armadillo-devel \
 	automake \
 	banshee \
 	boost \
