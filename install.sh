@@ -45,6 +45,8 @@ sudo -E dnf -y install \
 	p7zip \
 	qt5-\* \
 	qt-creator \
+	redshift \
+	redshift-gtk \
 	socat \
 	swig \
 	valgrind \
