@@ -9,9 +9,6 @@ sudo -v
 # display start message
 echo "installing $APP_NAME..."
 
-# install dependencies using apt-get package manager
-sudo -E dnf -y install curl
-
 # install rvm
 command curl -sSL https://rvm.io/mpapis.asc | sudo gpg --import -
 \curl -sSL https://get.rvm.io | sudo bash -s stable
