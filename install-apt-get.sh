@@ -17,6 +17,7 @@ sudo -E apt-get -y install \
 	curl \
 	docker.io \
 	doxygen \
+	freeglut3-dev \
 	gimp \
 	git \
 	google-chrome-stable \
@@ -24,6 +25,8 @@ sudo -E apt-get -y install \
 	inotify-tools \
 	libarmadillo-dev \
 	libboost-all-dev \
+	libglu1-mesa-dev \
+	mesa-common-dev \
 	moreutils \
 	openssh-server \
 	p7zip \
