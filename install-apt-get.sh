@@ -26,6 +26,7 @@ sudo -E apt-get -y install \
 	libarmadillo-dev \
 	libboost-all-dev \
 	libglu1-mesa-dev \
+	libxerces-c-dev \
 	mesa-common-dev \
 	moreutils \
 	openssh-server \
