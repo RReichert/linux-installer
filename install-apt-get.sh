@@ -12,6 +12,7 @@ sudo -E apt-get update
 
 # install packages
 sudo -E apt-get -y install \
+	aspectc++ \
 	build-essential \
 	cmake \
 	curl \
