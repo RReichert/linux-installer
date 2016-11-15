@@ -64,11 +64,13 @@ sudo -E dnf -y install \
 	libxslt-devel \
 	libXtst-devel \
 	make \
+	mysql-dev \
 	moreutils \
 	nss-devel \
 	openssh-server \
 	p7zip \
 	pciutils-devel \
+	postgresql-devel \
 	pulseaudio-libs-devel \
 	socat \
 	swig \

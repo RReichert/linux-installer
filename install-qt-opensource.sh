@@ -9,7 +9,7 @@ VERSION=5.7.0
 # check pre-requisites
 if ! command -v git > /dev/null ; then
 	>&2 echo "error: git is not installed in your system"
-	exit 1
+	exit
 fi
 
 # assure workspace exists
@@ -21,8 +21,9 @@ fi
 pushd "${HOME}/Workspace/github" > /dev/null
 
 	# download repository
-	if [ ! -d qt5 ] ; then 
+	if [ ! -d qt5 ] ; then
 		git clone git://code.qt.io/qt/qt5.git
+		#git clong https://github.com/qt/qt5.git
 	fi
 	
 	# jump into repository
@@ -35,7 +36,7 @@ pushd "${HOME}/Workspace/github" > /dev/null
 		git submodule foreach --recursive "git clean -dfx" && git clean -dfx
 		
 		# compile & install
-		./configure -prefix "/opt/qt/${VERSION}" -opensource -confirm-license
+		./configure -prefix "/opt/qt/${VERSION}" -opensource -confirm-license -debug -syslog -plugin-sql-psql -plugin-sql-mysql -plugin-sql-sqlite -plugin-sql-sqlite2
 		make -j 4	
 	
 	popd > /dev/null

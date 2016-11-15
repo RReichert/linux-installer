@@ -42,9 +42,13 @@ sudo -E apt-get -y install \
 	libgstreamer0.10-dev \
 	libgstreamer-plugins-base0.10-dev \
 	libicu-dev \
+	libmysqlclient-dev \
 	libnss3-dev \
 	libpci-dev \
+	libpq-dev \
 	libpulse-dev \
+	libsqlite0-dev \
+	libsqlite3-dev \
 	libssl-dev \
 	libudev-dev \
 	libx11-xcb-dev \
@@ -61,11 +65,14 @@ sudo -E apt-get -y install \
 	libxtst-dev \
 	mesa-common-dev \
 	moreutils \
+	mysql-client \
 	openssh-server \
 	p7zip \
 	perl \
+	postgresql-client \
 	python \
 	socat \
+	sqlite3 \
 	swig \
 	valgrind \
 	vim \
