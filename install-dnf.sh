@@ -22,38 +22,64 @@ sudo -E dnf -y upgrade
 
 # install packages
 sudo -E dnf -y install \
+	alsa-lib-devel \
 	armadillo-devel \
 	automake \
 	banshee \
+	bison \
 	boost \
 	boost-devel \
 	cmake \
+	cups-devel \
 	curl \
+	dbus \
+	dbus-devel \
 	docker \
 	doxygen \
 	eclipse-jdt \
+	flex \
+	fontconfig-devel \
 	gcc \
 	gcc-c++ \
 	gimp \
 	git \
 	google-chrome-stable \
+	gperf \
 	graphviz \
-	kernel-devel \
 	inotify-tools \
+	kernel-devel \
+	libcap-devel \
+	libgcrypt \
+	libgcrypt-devel \
+	libgudev1-devel \
+	libicu-devel \
+	libX11-devel \
+	libxcb \
+	libxcb-devel \
+	libXcomposite-devel \
+	libXcursor-devel \
+	libXi-devel \
+	libXrandr-devel \
+	libXrender-devel \
+	libxslt-devel \
+	libXtst-devel \
 	make \
 	moreutils \
+	nss-devel \
 	openssh-server \
 	p7zip \
-	qt5-\* \
-	qt-creator \
-	redshift \
-	redshift-gtk \
+	pciutils-devel \
+	pulseaudio-libs-devel \
 	socat \
 	swig \
+	systemd-devel \
 	valgrind \
 	vim-enhanced \
 	VirtualBox \
 	vlc \
+	xcb-util \
+	"xcb-util-*-devel" \
+	xcb-util-devel \
 	xmlstarlet
 
 # install codecs
