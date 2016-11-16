@@ -23,6 +23,7 @@ There are a few other things that you will need to do manually:
   2. run the following scripts as a normal user
 
     $ ./install-qt-opensource.sh
+    $ ./install-qt-creator-opensource.sh
 
   3. as a SUPER USER, run the following to install the latest Ruby
 

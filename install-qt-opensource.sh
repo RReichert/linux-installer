@@ -6,40 +6,34 @@ sudo -v
 # qt version to compile/install
 VERSION=5.7.0
 
-# check pre-requisites
-if ! command -v git > /dev/null ; then
-	>&2 echo "error: git is not installed in your system"
-	exit
-fi
-
-# assure workspace exists
+# create workspace
 if [ ! -d "${HOME}/Workspace/github" ] ; then
 	mkdir -p "${HOME}/Workspace/github"
 fi
 
-# jump into workspace
+# change directory to workspace
 pushd "${HOME}/Workspace/github" > /dev/null
 
 	# download repository
 	if [ ! -d qt5 ] ; then
 		git clone git://code.qt.io/qt/qt5.git
-		#git clong https://github.com/qt/qt5.git
 	fi
-	
-	# jump into repository
+
+	# change directory to repository
 	pushd qt5 > /dev/null
-	
-		# repository setup
+
+		# clean up repostiroy
 		git fetch
 		git checkout -f "v${VERSION}"
 		git submodule update  --init --recursive
 		git submodule foreach --recursive "git clean -dfx" && git clean -dfx
-		
-		# compile & install
-		./configure -prefix "/opt/qt/${VERSION}" -opensource -confirm-license -debug -syslog -plugin-sql-psql -plugin-sql-mysql -plugin-sql-sqlite -plugin-sql-sqlite2
-		make -j 4	
-	
+
+		# configure, compile & install qt
+		./configure -prefix "/usr/local/qt-${VERSION}" -opensource -confirm-license -debug -syslog -plugin-sql-psql -plugin-sql-mysql -plugin-sql-sqlite -plugin-sql-sqlite2
+		make -j5
+		sudo make install
+
 	popd > /dev/null
-	
+
 popd > /dev/null
 
