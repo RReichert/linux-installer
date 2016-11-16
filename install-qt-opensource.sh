@@ -56,5 +56,5 @@ EOF
 sudo ldconfig
 
 # update qt5 library
-ln -sfn "${PREFIX}/${VERSION}" /opt/qt5
+sudo ln -sfn "${PREFIX}/${VERSION}" /opt/qt5
 
